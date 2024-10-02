@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\david\\source\\repos\\PetAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\petapi\\petapi\\controllers\\digipetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\controllers\\digipetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\petapi\\petapi\\models\\digipetsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\models\\digipetsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DigiPetsController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\PetAPI\\PetAPI\\Controllers\\DigiPetsController.cs",
+              "RelativeDocumentMoniker": "PetAPI\\Controllers\\DigiPetsController.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\PetAPI\\PetAPI\\Controllers\\DigiPetsController.cs",
+              "RelativeToolTip": "PetAPI\\Controllers\\DigiPetsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T19:44:43.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DigiPetsDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\PetAPI\\PetAPI\\Models\\DigiPetsDbContext.cs",
+              "RelativeDocumentMoniker": "PetAPI\\Models\\DigiPetsDbContext.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\PetAPI\\PetAPI\\Models\\DigiPetsDbContext.cs",
+              "RelativeToolTip": "PetAPI\\Models\\DigiPetsDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T19:40:23.501Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

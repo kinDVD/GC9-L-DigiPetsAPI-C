@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PetAPI.props" />
+</Project>
