@@ -9,5 +9,4 @@ public interface AccountsRepository extends JpaRepository<AccountDetails, Long> 
 
     //AccountDetails addCredits(Long id, int amount);
 
-
 }
