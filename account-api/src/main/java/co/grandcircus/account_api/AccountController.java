@@ -55,11 +55,13 @@ public class AccountController {
     }
     
     @PutMapping("/AccountDetails/{id}/add-credits")
-    public int addCredits(@PathVariable("id") Long id, @RequestParam int amount){
+    public AccountDetails addCredits(@PathVariable("id") Long id, @RequestParam int amount){
         AccountDetails account = accRepo.findById(id).orElse(null);
         int credits = account.getCredits();
         credits += amount;
-        return credits;
+        account.setCredits(credits);
+        accRepo.save(account);
+        return account;
         //return accRepo.addCredits(id, amount);       
     }
 
@@ -68,48 +70,50 @@ public class AccountController {
         AccountDetails account = accRepo.findById(id).orElse(null);
         int credits = account.getCredits();
         int cost = 0;
-        if(action == "CREATE"){
+        if(action.equals("CREATE")){
             cost = 5;
             credits -= cost;
         }
-        else if(action == "HEAL"){
+        else if(action.equals("HEAL")){
             cost = 1;
             credits -= cost;
         }
-        else if(action == "TRAIN"){
+        else if(action.equals("TRAIN")){
             cost = 1;
             credits -= cost;
         }
-        else if(action == "BATTLE"){
+        else if(action.equals("BATTLE")){
             cost = 2;
             credits -= cost;
         }
         account.setCredits(credits);
+        accRepo.save(account);
         return account;
     }
     
-    @PostMapping("/AccountDetails/by-key/{apiKey}/action")
+    @PutMapping("/AccountDetails/by-key/{apiKey}/action")
     public AccountDetails actionByApi(@PathVariable("apiKey") String apiKey, @RequestParam String action){
         AccountDetails account = accRepo.findByApiKey(apiKey);
         int credits = account.getCredits();
         int cost = 0;
-        if(action == "CREATE"){
+        if(action.equals("CREATE")){
             cost = 5;
             credits -= cost;
         }
-        else if(action == "HEAL"){
+        else if(action.equals("HEAL")){
             cost = 1;
             credits -= cost;
         }
-        else if(action == "TRAIN"){
+        else if(action.equals("TRAIN")){
             cost = 1;
             credits -= cost;
         }
-        else if(action == "BATTLE"){
+        else if(action.equals("BATTLE")){
             cost = 2;
             credits -= cost;
         }
         account.setCredits(credits);
+        accRepo.save(account);
         return account;
     }
 }
