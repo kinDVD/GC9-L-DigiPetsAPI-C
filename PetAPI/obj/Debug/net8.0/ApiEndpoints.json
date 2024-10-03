@@ -1,0 +1,113 @@
+[
+  {
+    "ContainingType": "PetAPI.Controllers.DigiPetsController",
+    "Method": "GetAll",
+    "RelativePath": "api/DigiPets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetAPI.Controllers.DigiPetsController",
+    "Method": "AddPet",
+    "RelativePath": "api/DigiPets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newPet",
+        "Type": "PetAPI.Models.DigiPet",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetAPI.Controllers.DigiPetsController",
+    "Method": "DeletePet",
+    "RelativePath": "api/DigiPets",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetAPI.Controllers.DigiPetsController",
+    "Method": "GetById",
+    "RelativePath": "api/DigiPets/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetAPI.Controllers.DigiPetsController",
+    "Method": "Battle",
+    "RelativePath": "api/DigiPets/{id}/Battle",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "opponentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetAPI.Controllers.DigiPetsController",
+    "Method": "HealPet",
+    "RelativePath": "api/DigiPets/{id}/Heal",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PetAPI.Controllers.DigiPetsController",
+    "Method": "TrainPet",
+    "RelativePath": "api/DigiPets/{id}/Train",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

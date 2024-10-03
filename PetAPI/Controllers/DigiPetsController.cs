@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PetAPI.Models;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using PetAPI.Services;
 
 namespace PetAPI.Controllers
 {
@@ -9,17 +8,34 @@ namespace PetAPI.Controllers
     [ApiController]
     public class DigiPetsController : ControllerBase
     {
+        private readonly AccountDetailsService _accService;
         DigiPetsDbContext dbContext = new DigiPetsDbContext();
 
+        public DigiPetsController(AccountDetailsService service)
+        {
+            _accService = service;
+        }
+
         [HttpGet()]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
             List<DigiPet> result = dbContext.DigiPets.ToList();
+            for (int i = 0; i < result.Count; i++)
+            {
+                try
+                {
+                    result[i].details = await _accService.GetAccountDetails(result[i].Id, result[i].details.apiKey);
+                }
+                catch (Exception e)
+                {
+                    result[i].details = null;
+                }
+            }
             return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
             if (result == null)
@@ -30,8 +46,9 @@ namespace PetAPI.Controllers
         }
 
         [HttpPost()]
-        public IActionResult AddPet([FromBody] DigiPet newPet)
+        public async Task<IActionResult> AddPet([FromBody] DigiPet newPet, string apiKey)
         {
+            AccountDetails acc = await _accService.Get
             newPet.Id = 0;
             dbContext.DigiPets.Add(newPet);
             dbContext.SaveChanges();
@@ -39,7 +56,7 @@ namespace PetAPI.Controllers
         }
 
         [HttpDelete()]
-        public IActionResult DeletePet(int id)
+        public async Task<IActionResult> DeletePet(int id)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
             if(result == null) { return NotFound("This is not the pet you're looking for."); }
@@ -47,7 +64,7 @@ namespace PetAPI.Controllers
         }
 
         [HttpPut("{id}/Heal")]
-        public IActionResult HealPet(int id)
+        public async Task<IActionResult> HealPet(int id)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
             
@@ -69,7 +86,7 @@ namespace PetAPI.Controllers
         }
 
         [HttpPut("{id}/Train")]
-        public IActionResult TrainPet(int id)
+        public async Task<IActionResult> TrainPet(int id)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
 
@@ -88,7 +105,7 @@ namespace PetAPI.Controllers
         }
 
         [HttpPut("{id}/Battle")]
-        public IActionResult Battle(int id, int opponentId)
+        public async Task<IActionResult> Battle(int id, int opponentId)
         {
             bool win = false;
             DigiPet userPet = dbContext.DigiPets.FirstOrDefault(p => p.Id == id);

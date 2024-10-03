@@ -21,5 +21,15 @@ namespace PetAPI.Services
             
             return result;
         }
+
+
+        //public async Task<int> GetIdFromApiKey(string key)
+        //{
+        //    HttpResponseMessage response = await client.GetAsync($"Accounts/by-key/{key}");
+        //    if (!response.IsSuccessStatusCode)
+        //        return 0;
+        //    Account account = await response.Content.ReadFromJsonAsync<Account>();
+        //    return account.Id;
+        //}
     }
 }
