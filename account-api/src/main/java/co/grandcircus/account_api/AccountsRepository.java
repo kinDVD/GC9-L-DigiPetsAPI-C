@@ -5,7 +5,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface AccountsRepository extends JpaRepository<AccountDetails, Long> {
     AccountDetails getByUsernameAndApiKey(String username, String apiKey);
 
-    String findByApiKey(String apiKey);
+    AccountDetails findByApiKey(String apiKey);
+
+    //AccountDetails addCredits(Long id, int amount);
 
 
 }
