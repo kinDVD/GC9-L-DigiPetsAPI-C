@@ -111,7 +111,22 @@ namespace PetAPI.Controllers
             userPet.Health = userPet.Health * userDamagePercentage;
             opponentPet.Health = opponentPet.Health * opponentDamangePercentage;
 
+            userPet.Experience += 1;
+            opponentPet.Experience += 1;
 
+            if(win = true)
+            {
+                return Ok($"{userPet} won!");
+            }
+            else if (win = false)
+            {
+                return Ok($"{userPet} lost..."); 
+            }
+            else
+            {
+                return Ok();
+            }
+            
 
         }
     }
