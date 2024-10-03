@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\PetAPI.csproj": {}
+    "/Users/alainrene/Desktop/SeptWeek4/Test/GC9-L-DigiPetsAPI-C/PetAPI/PetAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\PetAPI.csproj": {
+    "/Users/alainrene/Desktop/SeptWeek4/Test/GC9-L-DigiPetsAPI-C/PetAPI/PetAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\PetAPI.csproj",
+        "projectUniqueName": "/Users/alainrene/Desktop/SeptWeek4/Test/GC9-L-DigiPetsAPI-C/PetAPI/PetAPI.csproj",
         "projectName": "PetAPI",
-        "projectPath": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\PetAPI.csproj",
-        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\obj\\",
+        "projectPath": "/Users/alainrene/Desktop/SeptWeek4/Test/GC9-L-DigiPetsAPI-C/PetAPI/PetAPI.csproj",
+        "packagesPath": "/Users/alainrene/.nuget/packages/",
+        "outputPath": "/Users/alainrene/Desktop/SeptWeek4/Test/GC9-L-DigiPetsAPI-C/PetAPI/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/alainrene/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

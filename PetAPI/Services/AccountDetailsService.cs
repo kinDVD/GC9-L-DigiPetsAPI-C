@@ -21,7 +21,16 @@ namespace PetAPI.Services
             
             return result;
         }
-
+        public async Task<AccountDetails>GetAccountDetailsByKey(string apiKey)
+        {
+            AccountDetails result = await _httpClient.GetFromJsonAsync<AccountDetails>($"/by-key/{apiKey}");
+            return result;
+        }
+        public async Task<AccountDetails>GetAccountDetailsById(long id)
+        {
+            AccountDetails result = await _httpClient.GetFromJsonAsync<AccountDetails>($"/{id}");
+            return result;
+        }
 
         //public async Task<int> GetIdFromApiKey(string key)
         //{
