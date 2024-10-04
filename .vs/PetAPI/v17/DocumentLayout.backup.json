@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\",
+  "WorkspaceRootPath": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\services\\accountdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\services\\accountdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\controllers\\digipetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\labs\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\controllers\\digipetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\controllers\\digipetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\models\\digipetsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\labs\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\services\\accountdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\services\\accountdetailsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\labs\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\models\\digipetsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\models\\digipetsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\labs\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\models\\digipet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|c:\\users\\david\\source\\repos\\labs\\lab-digitpetapi\\gc9-l-digipetsapi-c\\petapi\\models\\digipet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FACDDBA9-BD09-4CF5-BB64-6973B9F6A996}|PetAPI\\PetAPI.csproj|solutionrelative:petapi\\models\\digipet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,28 +30,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AccountDetailsService.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Services\\AccountDetailsService.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Services\\AccountDetailsService.cs",
               "RelativeDocumentMoniker": "PetAPI\\Services\\AccountDetailsService.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Services\\AccountDetailsService.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Services\\AccountDetailsService.cs",
               "RelativeToolTip": "PetAPI\\Services\\AccountDetailsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T20:51:36.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DigiPetsController.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Controllers\\DigiPetsController.cs",
+              "RelativeDocumentMoniker": "PetAPI\\Controllers\\DigiPetsController.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Controllers\\DigiPetsController.cs",
+              "RelativeToolTip": "PetAPI\\Controllers\\DigiPetsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T19:44:43.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "DigiPet.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPet.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPet.cs",
               "RelativeDocumentMoniker": "PetAPI\\Models\\DigiPet.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPet.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPet.cs",
               "RelativeToolTip": "PetAPI\\Models\\DigiPet.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -62,9 +75,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Program.cs",
               "RelativeDocumentMoniker": "PetAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Program.cs",
               "RelativeToolTip": "PetAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -73,24 +86,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DigiPetsController.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Controllers\\DigiPetsController.cs",
-              "RelativeDocumentMoniker": "PetAPI\\Controllers\\DigiPetsController.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Controllers\\DigiPetsController.cs",
-              "RelativeToolTip": "PetAPI\\Controllers\\DigiPetsController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwDIAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T19:44:43.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "DigiPetsDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPetsDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPetsDbContext.cs",
               "RelativeDocumentMoniker": "PetAPI\\Models\\DigiPetsDbContext.cs",
-              "ToolTip": "C:\\Users\\david\\source\\repos\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPetsDbContext.cs",
+              "ToolTip": "C:\\Users\\david\\source\\repos\\Labs\\Lab-DigitPetApi\\GC9-L-DigiPetsAPI-C\\PetAPI\\Models\\DigiPetsDbContext.cs",
               "RelativeToolTip": "PetAPI\\Models\\DigiPetsDbContext.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwBUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

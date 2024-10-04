@@ -21,6 +21,11 @@
         "Name": "newPet",
         "Type": "PetAPI.Models.DigiPet",
         "IsRequired": true
+      },
+      {
+        "Name": "apiKey",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -36,6 +41,11 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "apiKey",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
@@ -74,6 +84,11 @@
         "Name": "opponentId",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "apiKey",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -90,6 +105,11 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "apiKey",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -106,6 +126,11 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      },
+      {
+        "Name": "apiKey",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -10,6 +10,18 @@ namespace PetAPI.Controllers
     {
         private readonly AccountDetailsService _accService;
         DigiPetsDbContext dbContext = new DigiPetsDbContext();
+        private async Task<AccountDetails?> ValidateApiKey(string apiKey)
+        {
+            try
+            {
+                AccountDetails accountDetails = await _accService.GetAccountDetailsByKey(apiKey);
+                return accountDetails;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
 
         public DigiPetsController(AccountDetailsService service)
         {
@@ -48,7 +60,11 @@ namespace PetAPI.Controllers
         [HttpPost()]
         public async Task<IActionResult> AddPet([FromBody] DigiPet newPet, string apiKey)
         {
-            AccountDetails acc = await _accService.Get
+            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            if (accountDetails == null)
+            { 
+                return Unauthorized("That's no API Key!");
+            }
             newPet.Id = 0;
             dbContext.DigiPets.Add(newPet);
             dbContext.SaveChanges();
@@ -56,21 +72,37 @@ namespace PetAPI.Controllers
         }
 
         [HttpDelete()]
-        public async Task<IActionResult> DeletePet(int id)
+        public async Task<IActionResult> DeletePet(int id, string apiKey)
         {
+            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            if (accountDetails == null)
+            {
+                return Unauthorized("That's no API Key!");
+            }
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
             if(result == null) { return NotFound("This is not the pet you're looking for."); }
+            if(accountDetails.id != result.AccountId)
+            {
+                return Forbid();
+            }
             else { dbContext.DigiPets.Remove(result); dbContext.SaveChanges(); return NoContent(); }
         }
 
         [HttpPut("{id}/Heal")]
-        public async Task<IActionResult> HealPet(int id)
+        public async Task<IActionResult> HealPet(int id, string apiKey)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
-            
+            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            if (accountDetails == null)
+            {
+                return Unauthorized("That's no API Key!");
+            }
             if (result.Id != id) { return BadRequest("IDs don't match"); }
             if (dbContext.DigiPets.Any(d => d.Id == id) == false) { return NotFound("No matching IDs"); }
-            
+            if (accountDetails.id != result.AccountId)
+            {
+                return Forbid();
+            }
             Random rnd = new Random();
             decimal health = new decimal(rnd.NextDouble() * (0.3 - 0.1) + 0.1);
             
@@ -86,13 +118,20 @@ namespace PetAPI.Controllers
         }
 
         [HttpPut("{id}/Train")]
-        public async Task<IActionResult> TrainPet(int id)
+        public async Task<IActionResult> TrainPet(int id, string apiKey)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
-
+            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            if (accountDetails == null)
+            {
+                return Unauthorized("That's no API Key!");
+            }
             if (result.Id != id) { return BadRequest("IDs don't match"); }
+            if (accountDetails.id != result.AccountId)
+            {
+                return Forbid();
+            }
             if (dbContext.DigiPets.Any(d => d.Id == id) == false) { return NotFound("No matching IDs"); }
-
             Random rnd = new Random();
             int strength = rnd.Next(1, 4);
 
@@ -105,12 +144,14 @@ namespace PetAPI.Controllers
         }
 
         [HttpPut("{id}/Battle")]
-        public async Task<IActionResult> Battle(int id, int opponentId)
+        public async Task<IActionResult> Battle(int id, int opponentId, string apiKey)
         {
             bool win = false;
+
             DigiPet userPet = dbContext.DigiPets.FirstOrDefault(p => p.Id == id);
             DigiPet opponentPet = dbContext.DigiPets.FirstOrDefault(p => p.Id == opponentId);
-
+            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            
             Random rnd = new Random();
 
             decimal? userAttackPower = userPet.Health * userPet.Strength * userPet.Experience * (new decimal (rnd.NextDouble()));
