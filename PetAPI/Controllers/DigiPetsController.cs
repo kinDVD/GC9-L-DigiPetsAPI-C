@@ -10,18 +10,7 @@ namespace PetAPI.Controllers
     {
         private readonly AccountDetailsService _accService;
         DigiPetsDbContext dbContext = new DigiPetsDbContext();
-        private async Task<AccountDetails?> ValidateApiKey(string apiKey)
-        {
-            try
-            {
-                AccountDetails accountDetails = await _accService.GetAccountDetailsByKey(apiKey);
-                return accountDetails;
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
-        }
+
 
         public DigiPetsController(AccountDetailsService service)
         {
@@ -58,11 +47,11 @@ namespace PetAPI.Controllers
         }
 
         [HttpPost()]
-        public async Task<IActionResult> AddPet([FromBody] DigiPet newPet, string apiKey)
+        public async Task<IActionResult> AddPet([FromBody] DigiPet newPet,[FromHeader] string apiKey)
         {
-            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            AccountDetails accountDetails = await _accService.GetAccountDetailsByKey(apiKey);
             if (accountDetails == null)
-            { 
+            {
                 return Unauthorized("That's no API Key!");
             }
             newPet.Id = 0;
@@ -74,7 +63,7 @@ namespace PetAPI.Controllers
         [HttpDelete()]
         public async Task<IActionResult> DeletePet(int id, string apiKey)
         {
-            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            AccountDetails accountDetails = await _accService.GetAccountDetailsByKey(apiKey);
             if (accountDetails == null)
             {
                 return Unauthorized("That's no API Key!");
@@ -92,7 +81,7 @@ namespace PetAPI.Controllers
         public async Task<IActionResult> HealPet(int id, string apiKey)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
-            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            AccountDetails accountDetails = await _accService.GetAccountDetailsByKey(apiKey);
             if (accountDetails == null)
             {
                 return Unauthorized("That's no API Key!");
@@ -121,7 +110,7 @@ namespace PetAPI.Controllers
         public async Task<IActionResult> TrainPet(int id, string apiKey)
         {
             DigiPet result = dbContext.DigiPets.FirstOrDefault(d => d.Id == id);
-            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            AccountDetails accountDetails = await _accService.GetAccountDetailsByKey(apiKey);
             if (accountDetails == null)
             {
                 return Unauthorized("That's no API Key!");
@@ -150,7 +139,7 @@ namespace PetAPI.Controllers
 
             DigiPet userPet = dbContext.DigiPets.FirstOrDefault(p => p.Id == id);
             DigiPet opponentPet = dbContext.DigiPets.FirstOrDefault(p => p.Id == opponentId);
-            AccountDetails accountDetails = await ValidateApiKey(apiKey);
+            AccountDetails accountDetails = await _accService.GetAccountDetailsByKey(apiKey);
             
             Random rnd = new Random();
 
